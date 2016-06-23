@@ -1,0 +1,25 @@
+
+#include <iostream>
+using namespace std;
+
+template <class T>
+class Sumu{
+T First;
+T Last;
+public :
+    Sumu (T a, T b ){
+    First = a;
+    Last = b;
+    }
+    T bigger();
+
+};
+template <class T> //we have to include this before each function and class
+T Sumu<T>::bigger(){ //T has to be included in an angle bracket after the Class name
+ return (First>Last?First:Last);
+}
+
+int main(){
+Sumu <int> su(56, 76);//we have to mention the type of object arguments
+cout<<su.bigger();
+}
